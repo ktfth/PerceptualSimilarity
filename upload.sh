@@ -1,0 +1,2 @@
+curl -i -X POST -H Content-Type: multipart/form-data -F img1=@/home/kaique/war/sturdy-couscous-models/data/train/gens/00007.jpg -F img2=@/home/kaique/war/sturdy-couscous-models/data/train/gens/00011.jpg localhost:6543/similarity
+curl -i -X POST -H Content-Type: multipart/form-data -F img1=@/home/kaique/war/sturdy-couscous-models/data/train/gens/00007.jpg -F img2=@/home/kaique/war/sturdy-couscous-models/data/train/gens/00011.jpg localhost:6543/similarity
