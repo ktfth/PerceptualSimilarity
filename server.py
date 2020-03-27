@@ -9,8 +9,11 @@ import models
 
 from util import util
 
-def hello_world(request):
-    return Response('Hello World!')
+def upload(request):
+    f = open('upload.html', 'rb')
+    content = f.read()
+    f.close()
+    return Response(content)
 
 def similarity(request):
     use_gpu = False
@@ -42,8 +45,8 @@ def similarity(request):
 
 if __name__ == '__main__':
     with Configurator() as config:
-        config.add_route('hello', '/')
-        config.add_view(hello_world, route_name='hello')
+        config.add_route('upload', '/')
+        config.add_view(upload, route_name='upload')
         config.add_route('similarity', '/similarity')
         config.add_view(similarity, route_name='similarity')
         app = config.make_wsgi_app()
