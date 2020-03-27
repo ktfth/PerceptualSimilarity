@@ -41,7 +41,7 @@ def similarity(request):
 
     d = model.forward(img1tensor, img2tensor)
 
-    return Response('Distance: %.3f' % d)
+    return Response('Distancia: %.3f' % d)
 
 if __name__ == '__main__':
     with Configurator() as config:
